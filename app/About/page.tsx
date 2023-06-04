@@ -1,9 +1,15 @@
 import React from 'react'
+import Navbar from '../components/Navbar/Navbar';
+import Footer from '../components/Footer/Footer';
 
-const About = () => {
+const Annie = () => {
   return (
-    <div className='mt-10'>About</div>
+    <>
+      <Navbar />
+      <div className='mt-12'>About</div>
+      <Footer />
+    </>
   )
 }
 
-export default About;
+export default Annie;

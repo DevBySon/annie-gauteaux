@@ -1,29 +1,14 @@
 'use client'
 
-import About from './About/page';
-import Annie from './Annie/page';
-import Menu from './Menu/page';
-import Navbar from './components/Navbar/Navbar';
-import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function Home() {
-  const pathName = usePathname();
-  console.log(pathName);
-  const renderComponent = () => {
-    if (pathName == '/home') {
-      return <Annie/>
-    } else if (pathName == '/menu') {
-      return <Menu/>
-    }else if (pathName == '/about') {
-      return <About/>
-    } else {
-      return null;
-    }
-  }
+  const router = useRouter();
+  useEffect(() => {
+    router.push('/home');
+  }, [router]);
   return (
-    <>
-      <Navbar />
-      {pathName === '/about' && <Menu />}
-    </>
-  )
+    <></>
+  );
 }

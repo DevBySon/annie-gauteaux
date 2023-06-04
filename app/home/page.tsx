@@ -6,7 +6,7 @@ const Annie = () => {
   return (
     <>
       <Navbar />
-      <div className='mt-12'>Menu</div>
+      <div className='mt-12'>Annie</div>
       <Footer />
     </>
   )
